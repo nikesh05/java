@@ -41,7 +41,16 @@ class employee{
         System.out.println(cname);
 
             }
+            ///////// Static Method 
+    static void cchange(String cn){
+        cname=cn;
+    }   
             public static void main(String... s){
+                //// Call static method with class name
+                employee.cchange("Google");
+                ///////////// call static method without class name
+                // cchange("Google");
+
                 employee e1=new employee();
                 e1.input(1,"sita");
                 e1.disp();
