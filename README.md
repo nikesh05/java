@@ -1,3 +1,23 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteRule ^job/([^/]+)/? job_listing.php?url=$1 [L,QSA]
+RewriteRule ^category/([^/]+)/? job_listing.php?id=$1 [L,QSA]
+RewriteRule ^job-description/([^/]+)/? job_description.php?jobid=$1 [L,QSA]
+RewriteRule ^job-description2/([^/]+)/? job_description2.php?jobid=$1 [L,QSA]
+RewriteRule ^client-engagement/([^/]+)/? client_engagment.php?ceid=$1 [L,QSA]
+RewriteRule ^human-resource/([^/]+)/? human_resource.php?ceid=$1 [L,QSA]
+
+RewriteRule ^jobs-by-position\/?$ jobs_by_position.php
+RewriteRule ^jobs-by-location\/?$ jobs_by_location.php
+RewriteRule ^phpinfo\/?$ phpinfo.php
+
+</IfModule>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
